@@ -1,0 +1,12 @@
+
+refs/remotes/m分支的含义 
+http://blog.chinaunix.net/uid-686647-id-4011506.html
+
+Nginx开发从入门到精通
+http://tengine.taobao.org/book/index.html
+
+
+Git与Repo入门
+http://www.cnblogs.com/angeldevil/p/3238470.html
+http://git-scm.com/book/zh/v2
+
