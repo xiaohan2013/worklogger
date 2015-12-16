@@ -10,3 +10,11 @@ Git与Repo入门
 http://www.cnblogs.com/angeldevil/p/3238470.html
 http://git-scm.com/book/zh/v2
 
+
+基于Repo和Git的版本管理
+http://blog.csdn.net/ocean2006/article/details/6422952
+
+
+
+ git创建与管理远程分支
+http://blog.csdn.net/fyh2003/article/details/7528157
