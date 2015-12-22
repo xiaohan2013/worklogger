@@ -1,0 +1,6 @@
+性能更好的js动画实现方式——requestAnimationFrame
+http://www.cnblogs.com/2050/p/3871517.html
+
+
+动画requestAnimationFrame
+http://www.cnblogs.com/aaronjs/p/4283109.html
