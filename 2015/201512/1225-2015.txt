@@ -1,0 +1,2 @@
+ IE浏览器部分版本不支持background-size属性问题
+ http://blog.csdn.net/auphiria/article/details/45221317

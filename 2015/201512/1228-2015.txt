@@ -1,0 +1,12 @@
+IE8下background-size的兼容问题
+https://github.com/louisremi/background-size-polyfill
+
+
+AlphaImageLoader Filter
+https://msdn.microsoft.com/en-us/library/ms532969(v=vs.85).aspx
+http://www.jsjtt.com/webkaifa/CSS/60.html
+
+
+文章 新闻 文章详情
+Slim —— PHP web开发微框架
+http://segmentfault.com/a/1190000000361586
