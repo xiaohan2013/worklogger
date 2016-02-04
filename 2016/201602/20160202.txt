@@ -1,0 +1,6 @@
+webpack + bowerで依存解決がうまくいかない時はaliasをつかうとよいかも
+http://im0-3.hatenablog.com/entry/2015/04/21/232107
+
+
+
+http://thujikun.github.io/blog/2014/12/07/webpack/

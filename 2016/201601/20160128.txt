@@ -1,0 +1,7 @@
+	http://1.newsbaoxiao.applinzi.com/
+
+移动端自适应方案
+	http://f2e.souche.com/blog/yi-dong-duan-zi-gua-ying-fang-an/
+	http://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html
+
+	

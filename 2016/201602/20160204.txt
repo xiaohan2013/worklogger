@@ -1,0 +1,88 @@
+CSS Pixel Widths
+http://www.canbike.org/CSSpixels/
+
+
+
+/* Samsung Galaxy S4 Landscape */
+@media screen (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+  and (device-width: 1920px)
+  and (orientation: landscape) {
+  /* Your styles here */
+}
+
+/* Samsung Galaxy S4 Portrait */
+@media screen (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+  and (device-width: 1080px)
+  and (orientation: portrait) {
+  /* Your styles here */
+}
+
+/* 
+  http://en.wikipedia.org/wiki/List_of_displays_by_pixel_density#Samsung 
+  htt
+
+
+/* iPhone 6 landscape */
+@media only screen and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2)
+{ }
+
+/* iPhone 6 portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2)
+{ }
+
+/* iPhone 6 Plus landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 3)
+{ }
+
+/* iPhone 6 Plus portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 3)
+{ }
+
+/* iPhone 6 and 6 Plus */
+@media only screen
+  and (max-device-width: 640px),
+  only screen and (max-device-width: 667px),
+  only screen and (max-width: 480px)
+{ }
+
+/* Apple Watch */
+@media
+  (max-device-width: 42mm)
+  and (min-device-width: 38mm)
+{ }
+
+
+
+
+
+CSS Media Queries For Mobile Devices
+http://www.andreasnorman.com/css-media-queries-for-mobile-devices/
+http://cssmediaqueries.com/target/
+
+
+
+"<div style='display:inline-block;width:64px;height:64px;background-color:#FFF;text-align:center;color:#333;'><span style='display:inline-block;margin-top:25px;font-size:10px'>无票据图像</span></div>"
+
+&report=132199&company=1
+
+&report=132199&company=1
+
+
+Pixel-Perfect UI in the WebView
+https://developer.chrome.com/multidevice/webview/pixelperfect
+http://www.initialxy.com/discussion/2013/11/25/troubles-with-device-width/    

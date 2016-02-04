@@ -1,0 +1,171 @@
+
+响应式布局设置--@media only screen and  
+http://chaofu200900.blog.163.com/blog/static/110119533201341102618140/
+响应式布局—设备像素密度测试 (-webkit-min-device-pixel-ratio)
+http://www.gbtags.com/gb/share/5307.htm
+
+
+
+
+Mozilla/5.0 (Linux; U; Android 4.3; en-us; SM-N900T Build/JSS15J) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30
+Mozilla/5.0 (Linux; U; Android 4.3; en-us; SM-N900T Build/JSS15J) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30
+Mozilla/5.0 (Linux; U; Android 4.0; en-us; GT-I9300 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30
+Mozilla/5.0 (Linux; Android 4.2.2; GT-I9505 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36
+
+
+/* ---------------------------------------------------------- */
+/*                                                            */
+/* A media query that captures:                               */
+/*                                                            */
+/* - Retina iOS devices                                       */
+/* - Retina Macs running Safari                               */
+/* - High DPI Windows PCs running IE 8 and above              */
+/* - Low DPI Windows PCs running IE, zoomed in                */
+/* - Low DPI Windows PCs and Macs running Firefox, zoomed in  */
+/* - Android hdpi devices and above                           */
+/* - Android tvdpi devices, including Google Nexus 7          */
+/* - Chrome running on high DPI Macs and PCs                  */
+/* - Opera running on high DPI Macs, PCs and mobile devices   */
+/*                                                            */
+/* Please note that that this code assumes you'll swap a      */
+/* 2× version of your images. If you'd like to supply         */
+/* finer increments, other thresholds might be appropriate.   */
+/*                                                            */
+/* A test for CSS pixel densites can be found here:           */
+/* http://bjango.com/articles/min-device-pixel-ratio/         */
+/*                                                            */
+/*                                  @marcedwards from @bjango */
+/*                                                            */
+/* ---------------------------------------------------------- */
+
+@media	only screen and (-webkit-min-device-pixel-ratio: 1.3),
+	only screen and (-o-min-device-pixel-ratio: 13/10),
+	only screen and (min-resolution: 120dpi)
+	{
+		/* Your code to swap higher DPI images */
+	}
+
+
+
+function uaredirect(f) {
+    try {
+        if (document.getElementById("bdmark") != null) {
+            return
+        }
+        var b = false;
+        if (arguments[1]) {
+            var e = window.location.host;
+            var a = window.location.href;
+            if (isSubdomain(arguments[1], e) == 1) {
+                f = f + "/#m/" + a;
+                b = true
+            } else {
+                if (isSubdomain(arguments[1], e) == 2) {
+                    f = f + "/#m/" + a;
+                    b = true
+                } else {
+                    f = a;
+                    b = false
+                }
+            }
+        } else {
+            b = true
+        }
+        if (b) {
+            var c = window.location.hash;
+            if (!c.match("fromapp")) {
+                if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i))) {
+                    location.replace(f)
+                }
+            }
+        }
+    } catch(d) {}
+}
+function isSubdomain(c, d) {
+    this.getdomain = function(f) {
+        var e = f.indexOf("://");
+        if (e > 0) {
+            var h = f.substr(e + 3)
+        } else {
+            var h = f
+        }
+        var g = /^www\./;
+        if (g.test(h)) {
+            h = h.substr(4)
+        }
+        return h
+    };
+    if (c == d) {
+        return 1
+    } else {
+        var c = this.getdomain(c);
+        var b = this.getdomain(d);
+        if (c == b) {
+            return 1
+        } else {
+            c = c.replace(".", "\\.");
+            var a = new RegExp("\\." + c + "$");
+            if (b.match(a)) {
+                return 2
+            } else {
+                return 0
+            }
+        }
+    }
+}; 
+<script type="text/javascript">uaredirect("你的手机版网址");></script>
+
+
+///<summary>  
+    /// 根据 Agent 判断是否是智能手机  
+    ///</summary>  
+    ///<returns></returns>  
+    public static bool CheckAgent()  
+    {  
+        bool flag = false;  
+  
+        string agent = HttpContext.Current.Request.UserAgent;  
+        string[] keywords = { "Android", "iPhone", "iPod", "iPad", "Windows Phone", "MQQBrowser" };  
+        "Android", "iPhone", "iPod", "iPad", "Windows Phone", "MQQBrowser" 
+  
+           //排除 Windows 桌面系统  
+            if (!agent.Contains("Windows NT") || (agent.Contains("Windows NT") && agent.Contains("compatible; MSIE 9.0;")))  
+            {  
+                //排除 苹果桌面系统  
+                if (!agent.Contains("Windows NT") && !agent.Contains("Macintosh"))  
+                {  
+                    foreach (string item in keywords)  
+                    {  
+                        if (agent.Contains(item))  
+                        {  
+                            flag = true;  
+                            break;  
+                        }  
+                    }  
+                }  
+            }  
+    
+        return flag;  
+    }  
+
+
+
+Device pixel density tests
+https://bjango.com/articles/min-device-pixel-ratio/
+
+
+<script type="text/javascript">
+if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+    if(window.location.href.indexOf("?mobile")<0){
+        try{
+            if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                window.location.href="手机页面";
+            }else if(/iPad/i.test(navigator.userAgent)){
+                window.location.href="平板页面";
+            }else{
+                window.location.href="其他移动端页面"
+            }
+        }catch(e){}
+    }
+}
+</script>

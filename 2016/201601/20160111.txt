@@ -1,0 +1,37 @@
+
+本规范是ECMAScript5.1中文版，下面是本人整理的一些其他es规范
+http://yanhaijing.com/es5/#null
+
+
+
+
+arrows
+classes
+enhanced object literals
+template strings
+destructuring
+default + rest + spread
+let + const
+iterators + for..of
+generators
+unicode
+modules
+module loaders
+map + set + weakmap + weakset
+proxies
+symbols
+subclassable built-ins
+promises
+math + number + string + array + object APIs
+binary and octal literals
+reflect api
+tail calls
+
+
+
+
+
+1、arrows
+相当于函数
+
+2、
