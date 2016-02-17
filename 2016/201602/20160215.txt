@@ -1,0 +1,41 @@
+//
+
+
+console.log('*** app start ***');
+
+console.log('***      module.filename = ' + module.filename + ' ***');
+console.log('***           __filename = ' + __filename + ' ***');
+console.log('***            __dirname = ' + __dirname + ' ***');
+console.log('***        process.cwd() = ' + process.cwd() + ' ***');
+console.log('*** require.main.filename= ' + require.main.filename + ' ***');
+
+console.log('*** app end ***');
+结论：
+
+module.filename：开发期间，该行代码所在的文件。
+__filename：始终等于 module.filename。
+__dirname：开发期间，该行代码所在的目录。
+process.cwd()：运行node的工作目录，可以使用  cd /d 修改工作目录。
+require.main.filename：用node命令启动的module的filename, 如 node xxx，这里的filename就是这个xxx。
+require()方法的坐标路径是：module.filename；fs.readFile()的坐标路径是：process.cwd()。
+
+
+
+
+
+
+data-uri
+将一个资源使用BASE64编码嵌入到样式文件，如果开启了ieCompat选项，而且资源文件的体积过大或者是在浏览器中使用，则会使用url()进行回退。如果没有指定MIME，则Node.js会使用MIME包来决定正确的MIME。
+参数：
+mimetype: MIME字符串，可选参数
+url: 需要内嵌的文件的url
+例如：
+data-uri('../data/image.jpg');
+输出：
+url('data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==');
+在浏览器中会输出：
+url('../data/image.jpg');
+例如：
+data-uri('image/jpeg;base64', '../data/image.jpg');
+会输出：
+url('data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==');
